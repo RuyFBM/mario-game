@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 15px solid rgb(35, 160, 35);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#61c7ef, #b9e3f4);
+  
+}
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+
+  animation: pipe-animation 1.6s infinite linear;
+}
+.planta {
+  position: absolute;
+  bottom: 0;
+  width: 90px;
+
+  animation: planta-animation 2.1s infinite linear;
+  
+}
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+.jump {
+  animation: jump 500ms ease-out;
+}
+.clouds {
+  position: absolute;
+  width: 500px;
+  animation: clouds-animation infinite 25s linear;
+  z-index: 99;
+}
+.smallClouds {
+  position: absolute;
+  width: 200px;
+  top: 200px;
+  animation: clouds-animation2 infinite 60s linear;
+  z-index: 9;
+}
+
+.fixedClouds {
+  position: absolute;
+  width: 200px;
+  top: 400px;
+  left: 600px;
+}
+
+/* .endgame {
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  top: 200px;
+  left: 550px;
+  animation: endgame 2s forwards ease-in-out ;
+  
+} */
+.pontuacao{
+    display: flex;
+    align-items: center;
+}
+#refresh{
+    font-family: sans-serif;
+    width: 150px;
+    height: 70px;
+    margin: 70px;
+    background: rgb(54, 238, 34);
+    border-radius: 6px;
+    color: #111;
+    font-size: 2em;
+}
+.instrucoes{
+    font-size: 2em;
+    font-family: sans-serif;
+}
+.instrucoes img{
+    width: 25px;
+}
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes clouds-animation2 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes planta-animation {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+/* @keyframes endgame {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+} */
